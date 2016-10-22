@@ -20,10 +20,3 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<script type="text/javascript">
-  jQuery(document).ready(funtion(){
-  jQuery("li.active").on("click", function(){
-    alert('working');
-  });
-});
-</script>
