@@ -11,7 +11,7 @@ require('laravel-elixir-vue-2');
  | for your Laravel application. By default, we are compiling the Sass
  | file for our application, as well as publishing vendor resources.
  |
- */
+ */ 
 
 elixir(mix => {
     mix.sass('app.scss')
