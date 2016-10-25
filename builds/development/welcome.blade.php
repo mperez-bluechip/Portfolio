@@ -85,7 +85,7 @@
       @include('layouts.navigation')
 
         <div class="flex-center position-ref full-height">
-          <p class="tagline">Tagline here</p>
+          <p class="tagline"></p>
             @if (Route::has('login'))
                 <div class="top-right links">
                     <a href="{{ url('/login') }}">Login</a>

@@ -1,4 +1,6 @@
-
+// _variables.scss
+// =================
+@import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
 // Body
 $body-bg: #f5f8fa;
 
@@ -35,3 +37,21 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+// Color Pallete
+
+$beige         : #E3C691;
+$darkGreenGold : #8D8862;
+$lightGreen    : #C0DC99;
+$green         : #507356;
+$lightBlue     : #97D5D9;
+$desatBlue     : #464B65;
+$purple        : #3E2B3D;
+$darkPurple    : #3A3248;
+$pink          : #CC8E94;
+$skin          : #B08B7B;
+
+
+// Fonts
+$headFont : 'Patua One', sans-serif;
+$bodyFont : 'Inika', serif;
