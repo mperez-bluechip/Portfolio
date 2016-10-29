@@ -21,7 +21,10 @@ elixir(mix => {
 var gulp = require('gulp'),
     connectPHP = require('gulp-connect-php'),
     connect = require('gulp-connect'),
+    livereload = require('gulp-livereload'),
     browserSync = require('browser-sync');
+
+var phpResources = "resources/views/*.blade.php";
 
 gulp.task('watch', function(){
   gulp.watch('resources/views/*.blade.php', ['php']);
@@ -34,21 +37,21 @@ gulp.task('php', function(){
 
 gulp.task('connectPHP', function(){
   connectPHP.server({
-    base: './resources/views/',
-    hostname: 'localhost',
-    // bin: '/Applications/MAMP/bin/php/php7.0.8/bin/php',
-    // ini: '/Applications/MAMP/bin/php/php7.0.8/conf/php.ini',
-    port: 8010,
-    livereload: true
+    base: 'resources/views',
+    host: phpResources,
+    hostname: '127.0.0.1',
+    bin: '/Applications/MAMP/bin/php/php7.0.8/bin/php',
+    ini: '/Applications/MAMP/bin/php/php7.0.8/conf/php.ini',
+    livereload: true,
+    keepalive: true
   });
 });
 
 gulp.task('browserSync',['connectPHP'], function(){
   browserSync({
-    proxy: '127.0.0.1:8010',
+    proxy: '127.0.0.1',
     port: 8080,
-    open: true,
-    notify: false
+    open: false
   });
 });
 
