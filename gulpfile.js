@@ -38,20 +38,21 @@ gulp.task('php', function(){
 gulp.task('connectPHP', function(){
   connectPHP.server({
     base: 'resources/views',
-    host: phpResources,
+    host: 'localhost',
     hostname: '127.0.0.1',
     bin: '/Applications/MAMP/bin/php/php7.0.8/bin/php',
     ini: '/Applications/MAMP/bin/php/php7.0.8/conf/php.ini',
-    livereload: true,
-    keepalive: true
+    livereload: true
   });
 });
 
 gulp.task('browserSync',['connectPHP'], function(){
   browserSync({
-    proxy: '127.0.0.1',
+    proxy: {
+    target: 'resources/' + phpResources
+  },
     port: 8080,
-    open: false
+    open: true
   });
 });
 
