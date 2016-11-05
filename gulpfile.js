@@ -24,14 +24,14 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     browserSync = require('browser-sync');
 
-var phpResources = "resources/views/*.blade.php";
+var phpResources = "resources/views/master.blade.php";
 
 gulp.task('watch', function(){
-  gulp.watch('resources/views/*.blade.php', ['php']);
+  gulp.watch('resources/views/master.blade.php', ['php']);
 });
 
 gulp.task('php', function(){
-  gulp.src('resources/views/*.blade.php')
+  gulp.src('resources/views/master.blade.php')
   .pipe(connect.reload({stream:true}))
 });
 
